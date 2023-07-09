@@ -11,15 +11,25 @@ body {
     background-size: 1160px;
     background-repeat: no-repeat;
     font-family: 'Barlow', sans-serif;
+    background-position: -1px -460px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto Slab', sans-serif;
-    font-weight: 700;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 800;
+    color: var(--primary-color);
 }
 
 :root {
     --primary-color: #e1b658;
+}
+
+.typechanger__letter {
+    font-family: 'Droidobesh', sans-serif;
+}
+
+.typechanger__letter--changed {
+    font-family: inherit;
 }
 
 .main-header {
@@ -71,40 +81,43 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero {
     position: relative;
-    color: #fff;
+    color: var(--primary-color);
 }
 
 .hero-ship {
     position: absolute;
     right: 290px;
-    top: 150px;
+    top: 268px;
     background: url(../img/starship.jpeg) no-repeat;
     width: 296px;
     height: 103px;
-    transform: rotate(9deg);
+    transform: rotate(10deg);
+    z-index: -1;
 }
 
 .hero-ship:before {
     content: '';
     display: block;
     background-color: #fffef9;
-    width: 40vw;
+    width: 100vw;
     position: absolute;
     right: 271px;
     transform: rotate(-10deg);
-    height: 11px;
-    top: 114px;
-    box-shadow: 0 0 4px 1px #fff;
+    height: 10px;
+    top: 216px;
+    box-shadow: 0 0 5px 1px #fff, -10px 0px 5px 0px orange;
 }
 
 .hero__title,
 .hero__subtitle {
     margin: 0;
+    text-shadow: 1px 4px 10px #000;
 }
 
 .hero__title {
-    font-size: 8rem;
+    font-size: 6.5rem;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .hero-subtitle {
@@ -116,4 +129,19 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     height: 630px;
     justify-content: center;
+}
+
+.startship-classes {
+    padding: 2rem 1rem 1rem;
+    background-color: rgba(255, 255, 255, 0.02);
+    color: #8f8f8f;
+}
+.startship-classes__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    list-style: none;
+}
+.startship-classes__subtitle {
+    margin-bottom: 2rem;
 }
