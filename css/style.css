@@ -1,9 +1,21 @@
+@font-face {
+    font-family: 'Droidobesh';
+    src: url('../fonts/Droidobesh.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     background: url(../img/bg.jpeg) #020409;
     background-size: 1160px;
     background-repeat: no-repeat;
     font-family: 'Barlow', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: 700;
 }
 
 :root {
@@ -50,4 +62,58 @@ body {
     border-radius: .5rem;
     display: block;
     width: 300px;
+}
+
+.container {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.hero {
+    position: relative;
+    color: #fff;
+}
+
+.hero-ship {
+    position: absolute;
+    right: 290px;
+    top: 150px;
+    background: url(../img/starship.jpeg) no-repeat;
+    width: 296px;
+    height: 103px;
+    transform: rotate(9deg);
+}
+
+.hero-ship:before {
+    content: '';
+    display: block;
+    background-color: #fffef9;
+    width: 40vw;
+    position: absolute;
+    right: 271px;
+    transform: rotate(-10deg);
+    height: 11px;
+    top: 114px;
+    box-shadow: 0 0 4px 1px #fff;
+}
+
+.hero__title,
+.hero__subtitle {
+    margin: 0;
+}
+
+.hero__title {
+    font-size: 8rem;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    height: 630px;
+    justify-content: center;
 }
